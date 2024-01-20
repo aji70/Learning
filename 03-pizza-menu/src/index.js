@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 const pizzaData = [
   {
@@ -48,30 +49,50 @@ const pizzaData = [
 
 function App() {
   return (
-    <>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
-    </>
+    </div>
   );
 }
 
 function Header() {
+  // const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
+  // <h1 style={style}>Fast React CO.</h1>
   return (
-    <div>
+    <header className="header">
       <h1>Fast React CO.</h1>
-    </div>
+    </header>
   );
 }
 function Menu() {
   return (
-    <>
+    <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-    </>
+      <Pizza
+        name="Pizza Spinaci"
+        ingridients="Tomato, mozarella, spinach, and ricotta cheese"
+        photoName="pizzas/spinaci.jpg"
+        price={10}
+      />
+      <Pizza
+        name="Pizza funghi"
+        ingridients="Tomato and mushroom"
+        photoName="pizzas/funghi.jpg"
+        price={13}
+      />
+    </main>
+  );
+}
+function Pizza(props) {
+  return (
+    <div className="pizza">
+      <img src={props.photoName} alt={props.name} />
+      <h3>{props.name}</h3>
+      <p>{props.ingridients}</p>
+      <span>{props.price}</span>
+    </div>
   );
 }
 
@@ -84,20 +105,13 @@ function Footer() {
   // else alert("we are closed");
   // if (isOpen) alert("We are open");
   // else alert("we are closed");
-  isOpen ? alert("We are open") : alert("we are closed");
+  // isOpen ? alert("We are open") : alert("we are closed");
   return (
     <>
-      <footer>{new Date().toLocaleTimeString()}. We are currently open</footer>
+      <footer className="footer">
+        {new Date().toLocaleTimeString()}. We are currently open
+      </footer>
     </>
-  );
-}
-function Pizza() {
-  return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="spinaci" />
-      <h2>Pizza Spinaci</h2>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
   );
 }
 
