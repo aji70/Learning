@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #merkelRoot {
+        margin-top: 20px;
+      }
+    </style>
+    <script src="merkeltree.js"></script>
+  </head>
+
+  <body>
+    <h1>Merkel Root Calculator</h1>
+
+    <label for="address1">Address 1:</label>
+    <input type="text" id="address1" placeholder="Enter Address 1" />
+
+    <label for="address2">Address 2:</label>
+    <input type="text" id="address2" placeholder="Enter Address 2" />
+
+    <label for="address3">Address 3:</label>
+    <input type="text" id="address3" placeholder="Enter Address 3" />
+
+    <button class="btn">Calculate Merkel Root</button>
+
+    <div id="merkelRoot"></div>
+
+    <label for="addressToVerify">Address to Verify:</label>
+    <input
+      type="text"
+      id="addressToVerify"
+      placeholder="Enter Address to Verify"
+    />
+
+    <div id="verificationResult"></div>
+  </body>
+</html>
