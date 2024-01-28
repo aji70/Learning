@@ -34,9 +34,10 @@ function Form({ onAddItems }) {
     const newItem = { description, quantity, packed: false, id: Date.now() };
     // console.log(newItem);
     onAddItems(newItem);
+
+    setDescription(" ");
+    setQuantity("1");
   }
-  setDescription(" ");
-  setQuantity("1");
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your trip?</h3>
