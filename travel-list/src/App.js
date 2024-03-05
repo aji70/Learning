@@ -8,7 +8,7 @@ function App() {
   }
   function handleDeleteItems(id) {
     setItems((items) => items.filter((item) => item.id !== id));
-  
+  }
   function handleToogleItem(id) {
     setItems((items) =>
       items.map((item) =>
