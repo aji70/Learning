@@ -53,7 +53,7 @@ function FlashCards() {
           onClick={() => {
             setSelectedId(question.id);
           }}
-          className={`${question.id === selectedId ? "selected" : ""}`}
+          className={question.id === selectedId ? "selected" : ""}
           key={question.id}
         >
           <p>
