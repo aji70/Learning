@@ -49,6 +49,28 @@ const tempWatchedData = [
 
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+
+export default function App() {
+  const [movies, setMovies] = useState(tempMovieData);
+  const [watched, setWatched] = useState(tempWatchedData);
+
+  return (
+    <>
+      <NavBar>
+        <Logo />
+        <Search />
+        <NumResult movies={movies} />
+      </NavBar>
+
+      <Main>
+        <ListBox>
+          <MovieList movies={movies} />
+        </ListBox>
+        <WatchedBox watched={watched} />
+      </Main>
+    </>
+  );
+}
 function Logo() {
   return (
     <div className="logo">
@@ -71,21 +93,15 @@ function Search() {
   );
 }
 
+function NavBar({ children }) {
+  return <nav className="nav-bar">{children}</nav>;
+}
+
 function NumResult({ movies }) {
   return (
     <p className="num-results">
       Found <strong>{movies.length}</strong> results
     </p>
-  );
-}
-
-function NavBar({ movies }) {
-  return (
-    <nav className="nav-bar">
-      <Logo />
-      <Search />
-      <NumResult movies={movies} />
-    </nav>
   );
 }
 
@@ -114,7 +130,7 @@ function MovieList({ movies }) {
   );
 }
 
-function ListBox({ movies }) {
+function ListBox({ children }) {
   const [isOpen1, setIsOpen1] = useState(true);
   return (
     <div className="box">
@@ -124,7 +140,7 @@ function ListBox({ movies }) {
       >
         {isOpen1 ? "–" : "+"}
       </button>
-      {isOpen1 && <MovieList movies={movies} />}
+      {isOpen1 && children}
     </div>
   );
 }
@@ -213,24 +229,6 @@ function WatchedSummary({ watched }) {
   );
 }
 
-function Main({ watched, movies }) {
-  return (
-    <main className="main">
-      <ListBox movies={movies} />
-      <WatchedBox watched={watched} />
-    </main>
-  );
-}
-
-export default function App() {
-  const [movies, setMovies] = useState(tempMovieData);
-  const [watched, setWatched] = useState(tempWatchedData);
-
-  return (
-    <>
-      <NavBar movies={movies} />
-
-      <Main movies={movies} watched={watched} />
-    </>
-  );
+function Main({ children }) {
+  return <main className="main">{children}</main>;
 }
