@@ -80,6 +80,7 @@ export default function App() {
           selectedFriend={selectedFriend}
           onSelection={handleSelection}
           onSplitBill={handleSplitBill}
+          key={selectedFriend.id}
         />
       )}
     </div>
