@@ -98,9 +98,9 @@ export default function App() {
           setMovies(data.Search);
         } catch (err) {
           if (err.name !== "AbortError") {
+            console.error(err.message);
             setError(err.message);
           }
-          console.error(err.message);
         } finally {
           setIsLoading(false);
         }
@@ -110,6 +110,7 @@ export default function App() {
         setError("");
         return;
       }
+      handleCloseMovie();
       fetchMovies();
 
       return function () {
@@ -118,6 +119,7 @@ export default function App() {
     },
     [query]
   );
+
   return (
     <>
       <NavBar>
@@ -252,7 +254,21 @@ function MovieDetails({ selectedId, watched, onAddWatched, onCloseMovie }) {
     Genre: genre,
   } = movie;
 
-  console.log(title, year);
+  useEffect(
+    function () {
+      function callback(e) {
+        if (e.code === "Escape") {
+          onCloseMovie();
+        }
+      }
+      document.addEventListener("keydown", callback);
+
+      return function () {
+        document.removeEventListener("keydown", callback);
+      };
+    },
+    [onCloseMovie]
+  );
 
   useEffect(
     function () {
