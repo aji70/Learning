@@ -6,36 +6,36 @@ import "./styles.css";
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [query, setQuery] = useState("");
-  const [result, setResult] = useState({});
+  const [query, setQuery] = useState(0);
+  const [result, setResult] = useState();
   const [currency, SetCurrency] = useState("USD");
   const [currency1, SetCurrency1] = useState("EUR");
 
   useEffect(
     function () {
       async function getConversion() {
-        try {
-          const res = await fetch(
-            ` https://api.frankfurter.app/latest?amount=${query}&from=EUR&to=USD
-          
+        const res = await fetch(
+          ` https://api.frankfurter.app/latest?amount=${query}&from=${currency}&to=${currency1}       
               `
-          );
-          const data = await res.json();
+        );
 
-          const extractedResult = data.rates.USD;
+        //  https://api.frankfurter.app/latest?amount=&from=USD&to=EUR
+        const data = await res.json();
 
-          setResult(extractedResult);
-        } catch (err) {
-          if (err.name !== "AbortError") {
-            console.error(err.message);
-            setError(err.message);
-          }
-        } finally {
-          setIsLoading(false);
-        }
+        const obj = data.rates;
+        if (!obj) return;
+        const valuesArray = Object.values(obj);
+
+        const extractedResult = valuesArray[0];
+
+        setResult(extractedResult);
+        console.log(extractedResult);
       }
 
-      getConversion();
+      if (query === 0) return;
+      else {
+        getConversion();
+      }
     },
     [query, currency, currency1]
   );
@@ -79,39 +79,27 @@ export default function App() {
   //   [query, currency, currency1]
   // );
 
-  function handleSetCurrency(e) {
-    SetCurrency(e.target.value);
-    console.log(currency);
-  }
-
-  function handleSetCurrency1(e) {
-    SetCurrency1(e.target.value);
-    console.log(currency);
-  }
-
+  console.log(currency);
+  console.log(currency1);
   function handleSetQuery(e) {
     setQuery(e.target.value);
   }
   return (
     <div>
       <input type="text" value={query} onChange={handleSetQuery} />
-      <select value={currency} onChange={handleSetCurrency}>
+      <select value={currency} onChange={(e) => SetCurrency(e.target.value)}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
         <option value="INR">INR</option>
       </select>
-      <select value={currency1} onChange={handleSetCurrency1}>
+      <select value={currency1} onChange={(e) => SetCurrency1(e.target.value)}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
         <option value="INR">INR</option>
       </select>
-      <p>
-        {JSON.stringify(result, null, 2)}
-
-        {/* Output */}
-      </p>
+      <p>{JSON.stringify(result, null, 2)}</p>
     </div>
   );
 }
