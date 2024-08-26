@@ -241,6 +241,15 @@ function MovieDetails({ selectedId, watched, onAddWatched, onCloseMovie }) {
     Genre: genre,
   } = movie;
 
+  const countRef = useRef(0);
+
+  useEffect(
+    function () {
+      if (userRating) countRef.current = countRef.current++;
+    },
+    [userRating]
+  );
+
   useEffect(
     function () {
       function callback(e) {
@@ -288,6 +297,7 @@ function MovieDetails({ selectedId, watched, onAddWatched, onCloseMovie }) {
       imdbRating: Number(imdbRating),
       runtime: runtime.split(" ").at(0),
       userRating,
+      countRatingDecision: countRef.current,
     };
     onAddWatched(newWatchedMovie);
     onCloseMovie();
