@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
-// `https://api.frankfurter.app/latest?amount=100&from=EUR&to=USD`
-// http://www.omdbapi.com/?apikey=${KEY}&s=${query}
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
