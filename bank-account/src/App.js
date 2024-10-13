@@ -66,8 +66,12 @@ export default function App() {
   return (
     <div className="App">
       <h1>useReducer Bank Account</h1>
-      <p>Balance: {balance}</p>
-      <p>Loan: {loan}</p>
+      {status === "on" && (
+        <>
+          <p>Balance: {balance}</p>
+          <p>Loan: {loan}</p>
+        </>
+      )}
 
       <p>
         <button
