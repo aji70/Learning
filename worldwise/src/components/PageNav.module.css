@@ -7,3 +7,6 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+:global(.active) {
+  background-color: green;
+}
