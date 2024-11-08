@@ -35,6 +35,79 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Beautiful city 🥖",
+      "position": {
+        "lat": 48.856613,
+        "lng": 2.352222
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "London",
+      "country": "United Kingdom",
+      "emoji": "🇬🇧",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Iconic landmarks 🎡",
+      "position": {
+        "lat": 51.507351,
+        "lng": -0.127758
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Frankfurt",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Financial hub 🏦",
+      "position": {
+        "lat": 50.110924,
+        "lng": 8.682127
+      },
+      "id": 98443200
+    },
+
+    {
+      "cityName": "Abuja",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Capital city 🏛️",
+      "position": {
+        "lat": 9.076479,
+        "lng": 7.398574
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Jos",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Serene and cool 🏞️",
+      "position": {
+        "lat": 9.896527,
+        "lng": 8.858331
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Kaduna",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Hub of activity 🏙️",
+      "position": {
+        "lat": 10.510463,
+        "lng": 7.416506
+      },
+      "id": 98443203
     }
   ]
 }
