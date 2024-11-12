@@ -6,7 +6,7 @@ import styles from "./Form.module.css";
 import Button from "./Button";
 
 import BackButton from "./BackButton";
-import useUrlPosition from "../hooks/useUrlPosition";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -15,6 +15,7 @@ export function convertToEmoji(countryCode) {
     .map((char) => 127397 + char.charCodeAt());
   return String.fromCodePoint(...codePoints);
 }
+const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
 function Form() {
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
@@ -24,8 +25,6 @@ function Form() {
   const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
-
-  const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
   useEffect(
     function () {
@@ -38,6 +37,9 @@ function Form() {
 
           const data = await res.json();
           console.log(data);
+          setCityName(data.city || data.locality || "");
+          setCountry(data.countryName);
+        } catch (err) {
         } finally {
           setIsLoadingGeocoding(false);
         }
