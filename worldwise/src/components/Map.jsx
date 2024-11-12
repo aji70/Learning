@@ -29,7 +29,6 @@ function Map() {
   useEffect(
     function () {
       if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
-      console.log(mapLat, mapLng, "map lat nd lng");
     },
     [mapLat, mapLng]
   );
@@ -42,7 +41,6 @@ function Map() {
     [geolocationPosition]
   );
 
-  console.log(mapPosition, " geoposition ->", geolocationPosition);
   return (
     <div className={styles.mapContainer}>
       {!geolocationPosition && (

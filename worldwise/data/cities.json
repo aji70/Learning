@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,80 +34,31 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
+      "id": "98443197"
     },
     {
-      "cityName": "Paris",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Beautiful city 🥖",
-      "position": {
-        "lat": 48.856613,
-        "lng": 2.352222
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "London",
-      "country": "United Kingdom",
-      "emoji": "🇬🇧",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Iconic landmarks 🎡",
-      "position": {
-        "lat": 51.507351,
-        "lng": -0.127758
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Frankfurt",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Financial hub 🏦",
-      "position": {
-        "lat": 50.110924,
-        "lng": 8.682127
-      },
-      "id": 98443200
-    },
-
-    {
-      "cityName": "Abuja",
+      "id": "2298",
+      "cityName": "Kachia",
       "country": "Nigeria",
       "emoji": "🇳🇬",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Capital city 🏛️",
+      "date": "2024-11-12T20:36:37.053Z",
+      "notes": "joy",
       "position": {
-        "lat": 9.076479,
-        "lng": 7.398574
-      },
-      "id": 98443201
+        "lat": "9.748015566784238",
+        "lng": "8.044649276676363"
+      }
     },
     {
-      "cityName": "Jos",
+      "id": "9d47",
+      "cityName": "Toro",
       "country": "Nigeria",
       "emoji": "🇳🇬",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Serene and cool 🏞️",
+      "date": "2024-11-12T20:36:47.161Z",
+      "notes": "",
       "position": {
-        "lat": 9.896527,
-        "lng": 8.858331
-      },
-      "id": 98443202
-    },
-    {
-      "cityName": "Kaduna",
-      "country": "Nigeria",
-      "emoji": "🇳🇬",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Hub of activity 🏙️",
-      "position": {
-        "lat": 10.510463,
-        "lng": 7.416506
-      },
-      "id": 98443203
+        "lat": "10.526733458262347",
+        "lng": "9.605105292150096"
+      }
     }
   ]
 }
