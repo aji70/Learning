@@ -23,6 +23,54 @@
         "lng": -3.7133789062500004
       },
       "id": "17806751"
+    },
+    {
+      "id": "0bff",
+      "cityName": "Valenzuela de Calatrava",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-11-13T11:12:58.137Z",
+      "notes": "",
+      "position": {
+        "lat": "38.85562215253512",
+        "lng": "-3.796667983905638"
+      }
+    },
+    {
+      "id": "4001",
+      "cityName": "Granatula de Calatrava",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-11-13T11:13:03.069Z",
+      "notes": "",
+      "position": {
+        "lat": "38.7531147796566",
+        "lng": "-3.708184093429892"
+      }
+    },
+    {
+      "id": "3c3a",
+      "cityName": "Marchena",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-11-13T11:13:21.691Z",
+      "notes": "",
+      "position": {
+        "lat": "37.32504161643702",
+        "lng": "-5.409366730283006"
+      }
+    },
+    {
+      "id": "3d30",
+      "cityName": "Marchena",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-11-13T11:13:26.689Z",
+      "notes": "",
+      "position": {
+        "lat": "37.32397006724404",
+        "lng": "-5.412445786908752"
+      }
     }
   ]
 }
