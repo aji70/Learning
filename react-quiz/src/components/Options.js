@@ -1,7 +1,9 @@
 import { useQuiz } from "../context/QuizContex";
 
 function Options() {
-  const { question, newAnswer, answer } = useQuiz();
+  
+  const { questions, index , newAnswer, answer } = useQuiz();
+  const question = questions[index]
   const hasAnswered = answer !== null;
   return (
     <div>
